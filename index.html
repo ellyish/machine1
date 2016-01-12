@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	</head>
+	<style>
+
+	 h1 {
+	 	margin: auto;
+	 	text-align: center;
+	 }
+	 .chart {
+		width: 70%;
+		margin: auto;
+	 }
+	
+	.progress {
+		height: 30px;
+		margin-bottom: 15px;
+
+	}
+
+	.progress div {
+		height: 30px;
+		background-color: #03A9F4;
+		line-height: 30px;
+		color: #fff;
+		font-family: sans-serif;
+	}
+
+	</style>
+	<body>
+		<div id="container">
+		</div>
+	</body>
+	<div>
+		
+	</div>
+	<script width="600" id='template' type='text/ractive'>
+
+		<h1>{{data.machinename}}</h1>
+
+		{{#data.machine}}
+			<div class='chart'>
+			<div class='progress' style=" background-color:#eee">
+			   <div style='width: {{ 100 * content.water / 100 }}%;'>water level is {{ 100 * content.water / 100 }}%</div>
+			</div>
+			<div class='progress' style=" background-color:#eee">
+			   <div style='width: {{ 100 * content.milk / 100 }}%;'>milk level is {{ 100 * content.milk / 100 }}%</div>
+			</div>
+			<div class='progress' style=" background-color:#eee">
+			   <div style='width: {{ 100 * content.sugar / 100 }}%;'>sugar level is {{ 100 * content.sugar / 100 }}%</div>
+			</div>
+			<div class='progress' style=" background-color:#eee">
+			   <div style='width: {{ 100 * content.coffee / 100 }}%;'>coffee level is {{ 100 * content.coffee / 100 }}%</div>
+			</div>
+			<div class='progress' style=" background-color:#eee">
+			   <div style='width: {{ 100 * content.tea / 100 }}%;'>tea level is {{ 100 * content.tea / 100 }}%</div>
+			</div>
+			<div class='progress' style=" background-color:#eee">
+			   <div style='width: {{ 100 * content.cpcino / 100 }}%;'>cpcino level is {{ 100 * content.cpcino / 100 }}%</div>
+			</div>
+			<div class='progress' style=" background-color:#eee">
+			   <div style='width: {{ 100 * content.cacao / 100 }}%;'>cacao level is {{ 100 * content.cacao / 100 }}%</div>
+			</div>
+			<div class='progress' style=" background-color:#eee">
+			   <div style='width: {{ 100 * content.chclate / 100 }}%;'>chclate level is {{ 100 * content.chclate / 100 }}%</div>
+			</div>
+			<div class='progress' style=" background-color:#eee">
+			   <div style='width: {{ 100 * content.cups1 / 100 }}%;'>cups1 level is {{ 100 * content.cups1 / 100 }}%</div>
+			</div>
+			<div class='progress' style=" background-color:#eee">
+			   <div style='width: {{ 100 * content.cups2 / 100 }}%;  '>cups2 level is {{ 100 * content.cups2 / 100 }}%</div>
+			</div>
+			<div class='progress' style=" background-color:#eee">
+			   <div style='width: {{ 100 * content.cups3 / 100 }}%;  '>cups3 level is {{ 100 * content.cups3 / 100 }}%</div>
+			</div>
+			<div class='progress' style=" background-color:#eee">
+			   <div style='width: {{ 100 * content.cups4 / 100 }}%;  '>cups4 level is {{ 100 * content.cups4 / 100 }}%</div>
+			</div>
+			<div class='progress' style=" background-color:#eee">
+			   <div style='width: {{ 100 * content.cups5 / 100 }}%;  '>cups5 level is {{ 100 * content.cups5 / 100 }}%</div>
+			</div>
+			<div class='progress' style=" background-color:#eee">
+			   <div style='width: {{ 100 * content.empty1 / 100 }}%;  '>empty1 level is {{ 100 * content.empty1 / 100 }}%</div>
+			</div>
+			<div class='progress' style=" background-color:#eee">
+			   <div style='width: {{ 100 * content.empty2 / 100 }}%;  '>empty2 level is {{ 100 * content.empty2 / 100 }}%</div>
+			</div>
+
+			</div>
+		{{/data.machine}}
+
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+
+	<script src='ractive.js'></script>
+	<script src="sample.js" type="text/javascript"></script>
+</html>
