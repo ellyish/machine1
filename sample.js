@@ -2,15 +2,6 @@
 var data;
 
 
-
-
-
-$.get("http://www.dweet.io/get/latest/dweet/for/machinebucm6").then(function  (result) {
-
-	data = result;
-	data.machine = data["with"];
-	console.log(data.machinename = data["with"][0].thing);
-
 	var ractive = new Ractive({
 	      // The `el` option can be a node, an ID, or a CSS selector.
 	      el: '#container',
@@ -24,10 +15,28 @@ $.get("http://www.dweet.io/get/latest/dweet/for/machinebucm6").then(function  (r
 	});
 
 
-	ractive.updateModel();
 
+function getData () {
 	
-})
+	$.get("http://www.dweet.io/get/latest/dweet/for/machinebucm6").then(function  (result) {
+
+		data = result;
+		data.machine = data["with"];
+		data.machinename = data["with"][0].thing
+
+		ractive.set('data', data);
+			
+	})
+
+	setInterval(getData, 100000)
+
+}
+
+getData()
+
+
+
+
 
 // data = {
 //     "this": "succeeded",
