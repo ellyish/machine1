@@ -28,11 +28,12 @@ function getData () {
 			
 	})
 
-	setInterval(getData, 100000)
 
 }
 
 getData()
+
+setInterval(getData, 100000)
 
 
 
