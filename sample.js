@@ -23,7 +23,7 @@ function getData () {
 		data = result;
 		data.machine = data["with"];
 		data.machinename = data["with"][0].thing
-
+		data.created = data["with"][0].created
 		ractive.set('data', data);
 			
 	})
