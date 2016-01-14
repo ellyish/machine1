@@ -23,7 +23,7 @@ function getData () {
 		data = result;
 		data.machine = data["with"];
 		data.machinename = data["with"][0].thing;
-		data.lastupdate = data["with"][0].created;
+		data.lastupdate = date.toLocaleString();
 		ractive.set('data', data);
 			
 	})
