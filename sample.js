@@ -15,15 +15,23 @@ var data;
 	});
 
 
+String.prototype.replaceBetween = function(start, end, what) {
+    return this.substring(0, start) + what + this.substring(end);
+};
 
 function getData () {
 	
 	$.get("http://www.dweet.io/get/latest/dweet/for/machinebucm6").then(function  (result) {
 
+		var hours = parseInt(data["with"][0].created.substring(11,13)) + 3
+		hours = ((hours + 11) % 12 + 1); 6
+		data["with"][0].created = data["with"][0].created.replaceBetween(11, 13, hours);
+
 		data = result;
 		data.machine = data["with"];
 		data.machinename = data["with"][0].thing;
-		data.lastupdate = (new Date).toLocaleString();
+		data.day = data["with"][0].created.substring(0, 9);
+		data.hour = data["with"][0].created.substring(11, 18);
 		ractive.set('data', data);
 			
 	})
