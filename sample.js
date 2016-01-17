@@ -36,13 +36,11 @@ function getData () {
 		ractive.set('data', data);
 			
 	})
-
-
 }
 
 getData()
 
-setInterval(getData, 100000)
+setInterval(getData(), 100000)
 
 
 
