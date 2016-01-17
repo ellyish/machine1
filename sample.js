@@ -1,5 +1,5 @@
 
-var data;
+var data = {};
 
 
 	var ractive = new Ractive({
