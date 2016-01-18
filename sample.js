@@ -26,7 +26,7 @@ function getData () {
 
 		data = result;
 		var hours = parseInt(data["with"][0].created.substring(11,13)) + 3
-		//hours = ((hours + 11) % 12 + 1); 6
+		hours = ((hours + 11) % 12 + 1); 6
 		data["with"][0].created = data["with"][0].created.replaceBetween(11, 13, hours);
 
 		data.machine = data["with"];
