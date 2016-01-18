@@ -32,7 +32,7 @@ function getData () {
 		data.machine = data["with"];
 		data.machinename = data["with"][0].thing;
 		data.day = data["with"][0].created.substring(0, 10);
-		data.hour = data["with"][0].created.substring(11, 18);
+		data.hour = data["with"][0].created.substring(11, 19);
 		
 		ractive.set('data', data);
 
