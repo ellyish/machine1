@@ -24,7 +24,7 @@ function getData () {
 		
 		data.machine = data["with"];
 		data.machinename = data["with"][0].thing;
-		data.lastUpdate = (new Date(data["with"][0].created)).toLocalsString();
+		data.lastUpdate = (new Date(data["with"][0].created)).toLocaleString();
 		ractive.set('data', data);
 
 	})
